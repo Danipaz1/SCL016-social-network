@@ -291,7 +291,7 @@ a {
       padding-top: 20px;
   }
 
-  #navbar.navbar-expand-sm.bg-dark.navbar-dark{
+  .navbar.navbar-expand-sm.bg-dark.navbar-dark{
     background: #D8CEF3;
     border: 1px solid #000000;
     box-sizing: border-box;

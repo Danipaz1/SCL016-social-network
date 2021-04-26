@@ -50,10 +50,6 @@ const login2 = document.getElementById('login2');
 login2.addEventListener('click', buttonLogin2, false);
 */
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 615f21fe6602d6e71348e002e48f7c2d2bc72749
 import {htmlLogin} from './lib/loginView.js'
 import {loginUser} from './lib/loginLogic.js'
 //nimport {homeView} from './lib/homeView.js'
@@ -90,10 +86,6 @@ const init = () => {
 }
 
 init();
-<<<<<<< HEAD
-=======
-
->>>>>>> 615f21fe6602d6e71348e002e48f7c2d2bc72749
 const loginGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -123,27 +115,4 @@ const loginGoogle = () => {
 const googleAcc = document.getElementById('google');
 googleAcc.addEventListener('click', loginGoogle, false);
 
-<<<<<<< HEAD
-
-
-
-const homeInit = () => {
-  //en que url estoy?
-  //estoy en home? pinto home
-  //estoy en login? pinto login
-  let url = window.location.hash;
-  console.log(url);
-  switch(url){
-    case '':
-    case '#/home':
-      //pintar login
-      document.querySelector('.home').innerHTML = homeView;
-
-      break;  
-  }
-}
-
-homeInit();
-=======
 //holi
->>>>>>> 615f21fe6602d6e71348e002e48f7c2d2bc72749
