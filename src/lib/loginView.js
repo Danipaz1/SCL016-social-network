@@ -1,4 +1,6 @@
-export const htmlLogin =             `<div class="login-box">
+export const htmlLogin = /*html*/
+             
+`<div class="login-box">
 <div class="login-snip">
   <h1>PARASOCIAL</h1>
   <img id="ghost" src="./img/pngegg.png">

@@ -52,7 +52,7 @@ login2.addEventListener('click', buttonLogin2, false);
 
 import {htmlLogin} from './lib/loginView.js'
 import {loginUser} from './lib/loginLogic.js'
-//nimport {homeView} from './lib/homeView.js'
+import {homeView} from './lib/homeView.js'
 
 
 const init = () => {
@@ -81,9 +81,23 @@ const init = () => {
         });
       
       });
-      break;  
-  }
+      break;
+      case '#/home':
+        //pintar home  
+        document.querySelector('.home').innerHTML = homeView;
+        const login2 = document.getElementById('login2');
+        
+        login2.addEventListener('click', () => {
+          let card = document.getElementById("card");
+          while (card.firstChild) {
+          element.removeChild(card.firstChild);
 }
+          });
+        
+        };
+        break;
+  }
+
 
 init();
 const loginGoogle = () => {
