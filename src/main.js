@@ -51,7 +51,7 @@ login2.addEventListener('click', buttonLogin2, false);
 */
 
 import {htmlLogin} from './lib/loginView.js'
-import {loginUser} from './lib/loginLogic.js'
+import {loginUser, singUpUser} from './lib/loginLogic.js'
 //import {homeView} from './lib/homeView.js'
 
 
@@ -69,7 +69,7 @@ const init = () => {
       const login2 = document.getElementById('login2');
       login2.addEventListener('click', () => {
         let email2 = document.getElementById('email2').value;
-        let pass2 = document.getElementById('pwd2').value
+        let pass2 = document.getElementById('pwd2').value;
         loginUser(email2, pass2)
         .then((userCredential) => {
           //redireccion a home
@@ -79,6 +79,27 @@ const init = () => {
         .catch((error) => {
           console.log('error: usuario NO logueado');
         });
+
+        const login1 = document.getElementById('login1');
+        login1.addEventListener('click', () => {
+          let email1 = document.getElementById('email1').value;
+          let pass1 = document.getElementById('pwd1').value;
+          singUpUser(email1, pass1)
+          .then((userCredential) => {
+            // Signed in
+            let user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            let errorCode = error.code; 
+            let errorMessage = error.message;
+            alert(errorMessage);
+            // ..
+    
+        });
+          
+        })
+
       
       });
       break;
