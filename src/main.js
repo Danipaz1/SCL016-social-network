@@ -18,8 +18,8 @@ const init = () => {
     case '':
     case '#/login':
       //pintar login
-      document.querySelector('.card').innerHTML = '';
-      document.querySelector('.card').appendChild(htmlLogin());
+      document.querySelector('.loginStyle').innerHTML = '';
+      document.querySelector('.loginStyle').appendChild(htmlLogin());
     
 
 //Usuarios ya registrados

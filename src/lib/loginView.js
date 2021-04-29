@@ -37,14 +37,18 @@ export const htmlLogin = () => {
 
   const div = document.createElement('div');
   div.classList.add('login-box');
-  div.innerHTML = `<div class="login-snip">
-  <h1>PARASOCIAL</h1>
-  <img id="ghost" src="./img/pngegg.png">
-  <p>
-    Únete a esta red de misterios, comparte tus experiencias, conoce miles de personas! Registrate ya!
-  </p>
-  <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-    <div class="login-space">
+  div.innerHTML = `
+  <div class="row">
+    <div class="col-md-6 mx-auto p-0">
+      <div class="card">
+        <div class="login-snip">
+          <h1>PARASOCIAL</h1>
+          <img id="ghost" src="./img/pngegg.png">
+          <p>
+          Únete a esta red de misterios, comparte tus experiencias, conoce miles de personas! Registrate ya!
+          </p>
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-space">
         <div class="login">
             <div class="group"> <label for="user" class="label">Ingrese su correo electrónico</label> <input id="emailLogin" type="text" class="input" placeholder="Correo electrónico"> </div>
             <div class="group"> <label for="pass" class="label">Ingrese su contraseña</label> <input id="passLogin" type="password" class="input" data-type="password" placeholder="Contraseña"> </div>
@@ -63,8 +67,12 @@ export const htmlLogin = () => {
             <div class="group"> <input type="submit" class="button" id="registerButton" value="Registrar"> </div>
             <div class="hr"></div>
             <div class="foot"> <label for="tab-1">Already Member?</label> </div>
+
         </div>
     </div>
+</div>
+</div>
+</div>
 </div>`
 
   const googleAcc = div.querySelector('#google');

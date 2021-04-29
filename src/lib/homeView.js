@@ -2,7 +2,9 @@ export const homeView = () => {
 
   const divHome = document.createElement('div');
   divHome.classList.add('jumbotron');
-  divHome.innerHTML = `<div class="jumbotron" style="margin-bottom:0">
+  divHome.innerHTML = `
+  <div class ="forumHome">
+  <div class="jumbotron" style="margin-bottom:0">
     <h1>PARASOCIAL</h1>
     <img src="/src/img/pngegg.png" id="ghostHome" >
   </div>
@@ -71,9 +73,7 @@ export const homeView = () => {
   <div class="jumbotron text-center" style="margin-bottom:0">
     <p>Footer</p>
   </div>
-    
-</body>
-</html>`
+  </div>`
 
 return divHome;
 
