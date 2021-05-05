@@ -18,20 +18,8 @@ const init = () => {
     case '':
     case '#/login':
       //pintar login
-<<<<<<< HEAD
-      document.querySelector('.loginStyle').innerHTML = '';
-      document.querySelector('.loginStyle').appendChild(htmlLogin());
-    
-
-//Usuarios ya registrados
-      
-
-//Usuarios nuevos no registrados
-        
-=======
       document.querySelector('.card').innerHTML = '';
       document.querySelector('.card').appendChild(htmlLogin());
->>>>>>> 2116da76d13353f2533fde8aa8b10d27a8614ffb
       break;
     case '#/home':
       document.querySelector('.home').appendChild(homeView());

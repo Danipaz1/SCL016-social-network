@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-export const homeView = () => { 
-
-  const divHome = document.createElement('div');
-  divHome.classList.add('containerHome');
-  divHome.innerHTML = `
-  <div class="containerHome">
-  <div class="jumbotron" style="margin-bottom:0">
-<h1>PARASOCIAL</h1>
-<img src="./img/ghostHome.png" class ="ghostHome">
-</div>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<a class="navbar-brand" href="#">Home</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="collapsibleNavbar">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">¿Qué es ParaSocial?</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Foros</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Tu perfil</a>
-    </li>    
-  </ul>
-</div>  
-</nav>
-
-<div class="container" style="margin-top:30px">
-  <div class="col-sm-8">
-    <textarea class="post" placeholder="Publica aquí tu contenido"></textarea>
-    <button class="publicar" id="publicar">Publicar</button>
-</div>
-</div>
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-<p>Footer</p>
-</div>`
-=======
 import { homeLogic } from './homeLogic.js'
 export const homeView = () => { /*html*/
 
@@ -92,10 +49,28 @@ export const homeView = () => { /*html*/
     console.log("titulo y descripcion", title, description);
     await homeLogic(title, description);
 
->>>>>>> 2116da76d13353f2533fde8aa8b10d27a8614ffb
 
 
   });
 
   return divHome;
 }
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    if (user.emailVerified === false)
+      document.getElementById('log').innerHTML =
+        `<p>logueado ${user.email} <p>
+          <button onclick="signOut()"> Cerrar Sesión</button>
+          `;
+    console.log(user)
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    let uid = user.uid;
+    // ...
+  } else {
+    document.getElementById('log').innerHTML = "No logueado ";
+    // User is signed out
+    // ...
+  }
+});
