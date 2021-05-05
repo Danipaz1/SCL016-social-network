@@ -51,26 +51,6 @@ export const homeView = () => { /*html*/
   return divHome;
 }
 
-<<<<<<< HEAD
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    if (user.emailVerified === false)
-      document.getElementById('log').innerHTML =
-        `<p>logueado ${user.email} <p>
-          <button onclick="signOut()"> Cerrar Sesión</button>
-          `;
-    console.log(user)
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    let uid = user.uid;
-    // ...
-  } else {
-    document.getElementById('log').innerHTML = "No logueado ";
-    // User is signed out
-    // ...
-  }
-});
-=======
  // Initialize Firebase
  firebase.initializeApp(firebaseConfig);
 
@@ -93,4 +73,3 @@ firebase.auth().onAuthStateChanged((user) => {
    }
  });
  firebase.analytics();
->>>>>>> a467acb0c623be9a270819d2acbd4f86e8780de2

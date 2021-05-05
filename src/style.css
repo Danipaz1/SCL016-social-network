@@ -3,11 +3,7 @@
 body {
     margin: 0;
     color: #548590;
-<<<<<<< HEAD
-    background: #ffffff;
-=======
     background: #000000db;
->>>>>>> a467acb0c623be9a270819d2acbd4f86e8780de2
     background-image: url("./img/fondo.jpg");
     font: 600 16px/18px 'ABeeZee', sans-serif;
 }
