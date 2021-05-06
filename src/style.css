@@ -14,13 +14,15 @@ body {
 }
 
 
-/*.login-box {
+.login-box {
     width: 100%;
     max-width: 525px;
     min-height: 670px;
     position: relative;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
-}*/
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    margin: auto;
+    
+}
 
 .login-snip {
     width: 100%;
@@ -262,6 +264,15 @@ a {
       background-color: black;
       height: 48px;
   }
+
+  .jumbotronFooter {
+    background-color: black;
+    height: 48px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+  }
   
   #logo {
     display: flex;
@@ -288,7 +299,7 @@ a {
   }
 
   .container{
-      background-color: #000000db; /* le da transparencia y asi no tengo que utilizar el opacity */
+      background-color: #000000db;
       padding-top: 20px;
   }
 
@@ -302,9 +313,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-left: -50px;
     padding-top: 5px;
     margin-bottom: 5px;
-    padding-left: 3px;
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
 }
 
 li{
@@ -321,20 +338,38 @@ li{
     width: 90%;
     height: 146px;
     resize: none;
+    padding: 10px;
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #494545;
+
 }
 
 #post {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    margin-right: 10%;
 }
 
 .hr1 {
-    height: 5px;
-    background-color: darkgray;
-    margin-top: 30px;
+    border: 3px solid #423D3D;
+    margin-top: 20px;
 }
 
 .homeBackground {
     background:linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('./img/fondo.jpg');
+}
+
+.saveComment {
+    background: #CFD7F3;
+    border: 1px solid #3A3838;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
 }

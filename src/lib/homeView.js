@@ -27,13 +27,16 @@ export const homeView = () => { /*html*/
 
   <form id="task-form">
     <div id="post">
-      <textarea id="description" rows="3" class="text-area" autofocus placeholder="Description"></textarea>
-      <button class="saveComment" id="saveComment" type="submit">Guardar</button>
+      <textarea id="description" rows="3" class="text-area" placeholder="Publica aquí tu contenido..."></textarea>
+      <button class="saveComment" id="saveComment" type="submit">Publicar</button>
     </div>
     <div class="hr1"></div>
   </form>
+
+  <textarea class="savedPost" id="savedPost" disabled></textarea>
+
   <button onclick="signOut()"> Cerrar Sesión</button>
-  <div class="jumbotron text-center" style="margin-bottom:0">
+  <div class="jumbotronFooter" style="margin-bottom:0">
     <p>Footer</p>
   </div>
   </div>`

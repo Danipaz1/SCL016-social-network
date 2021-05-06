@@ -66,6 +66,7 @@ export const htmlLogin = () => {
       });
   });
 
+  //-------------------------------------SING UP-----------------------------------
   const login1 = div.querySelector('#registerButton');
   login1.addEventListener('click', () => {
     let email1 = div.querySelector('#emailRegister').value;
@@ -88,7 +89,8 @@ export const htmlLogin = () => {
   });
   return div;
 };
-//LOGIN CON GOOGLE
+
+//-----------------------------------------------------LOGIN CON GOOGLE
 const loginGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
 

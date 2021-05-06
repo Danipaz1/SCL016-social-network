@@ -28,3 +28,18 @@ const init = () => {
 }
 
 init();
+
+//---------------------------------función de post--------------
+
+let description = document.getElementById("description");
+let saveComment = document.getElementById("saveComment");
+//let savedPost = document.getElementById("savedPost");
+
+const userPost = () => {
+ let text = description.value;
+
+ document.getElementById("savedPost").innerHTML = text;
+}
+
+saveComment.addEventListener('click', userPost);
+
