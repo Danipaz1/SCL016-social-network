@@ -373,3 +373,13 @@ li{
     height: 25px;
     margin-top: 15px;
 }
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeComments {
+    color: #000000;
+    background-color: beige;
+}

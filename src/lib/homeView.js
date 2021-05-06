@@ -1,4 +1,4 @@
-import { homeLogic } from './homeLogic.js'
+import { homeLogic, getComments } from './homeLogic.js'
 export const homeView = () => { /*html*/
 
   const divHome = document.createElement('div');
@@ -31,6 +31,7 @@ export const homeView = () => { /*html*/
       <button class="saveComment" id="saveComment" type="submit">Publicar</button>
     </div>
     <div class="hr1"></div>
+    <div id= "post-container" class="postContainer"></div>
   </form>
 
   <textarea class="savedPost" id="savedPost" disabled></textarea>
@@ -39,7 +40,8 @@ export const homeView = () => { /*html*/
   <div class="jumbotronFooter" style="margin-bottom:0">
     <p>Footer</p>
   </div>
-  </div>`
+  </div>`;
+  
   
   const taskForm = divHome.querySelector('#task-form');
   taskForm.addEventListener('submit', async (e) => {
@@ -48,31 +50,9 @@ export const homeView = () => { /*html*/
     const description = taskForm['description'].value;
     console.log("descripcion",description);
     await homeLogic(description);
-    
+
+    taskForm.reset();
   });
 
   return divHome;
 }
-
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
-
- firebase.auth().onAuthStateChanged((user) => {
-   if (user) {
-     if (user.emailVerified === false)
-       document.getElementById('log').innerHTML =
-         `<p>logueado ${user.email} <p>
-           <button onclick="signOut()"> Cerrar Sesión</button>
-           `;
-     console.log(user)
-     // User is signed in, see docs for a list of available properties
-     // https://firebase.google.com/docs/reference/js/firebase.User
-     let uid = user.uid;
-     // ...
-   } else {
-     document.getElementById('log').innerHTML = "No logueado ";
-     // User is signed out
-     // ...
-   }
- });
- firebase.analytics();

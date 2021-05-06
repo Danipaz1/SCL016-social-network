@@ -40,10 +40,10 @@ export const htmlLogin = () => {
 </div>
 </div>
 </div>`
-
+//Evento botón de google
   const googleAcc = div.querySelector('#google');
   googleAcc.addEventListener('click', loginGoogle);
-
+//Botón de login
   const login2 = div.querySelector('#loginButton');
   login2.addEventListener('click', () => {
     let emailLogin = div.querySelector('#emailLogin').value;
@@ -65,8 +65,7 @@ export const htmlLogin = () => {
         alert(errorMessage);
       });
   });
-
-  //-------------------------------------SING UP-----------------------------------
+//Botón de registro
   const login1 = div.querySelector('#registerButton');
   login1.addEventListener('click', () => {
     let email1 = div.querySelector('#emailRegister').value;
