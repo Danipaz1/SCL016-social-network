@@ -32,7 +32,7 @@ const init = () => {
           postContainer.innerHTML += `<p class="homeComments">
           ${doc.data().description}
           </p>
-          <button class"delete">Borrar</button>`
+          <button class="delete">Borrar</button>`
         });
         
       })

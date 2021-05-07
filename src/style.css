@@ -377,9 +377,34 @@ li{
 .postContainer {
     display: flex;
     flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .homeComments {
     color: #000000;
     background-color: beige;
+    margin-top: 50px;
+    width: 82%;
+    height: 146px;
+    resize: none;
+    padding: 10px;
+    font-family: Abel;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #494545;
+}
+
+.delete{
+    background: #CFD7F3;
+    border: 1px solid #3A3838;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
 }
