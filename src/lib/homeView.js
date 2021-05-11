@@ -34,8 +34,6 @@ export const homeView = () => { /*html*/
     <div id= "post-container" class="postContainer"></div>
   </form>
 
-  <textarea class="savedPost" id="savedPost" disabled></textarea>
-
   <button onclick="signOut()"> Cerrar Sesión</button>
   <div class="jumbotronFooter" style="margin-bottom:0">
     <p>Footer</p>
