@@ -388,7 +388,6 @@ li{
     background-color: beige;
     margin-top: 50px;
     width: 82%;
-    height: 146px;
     resize: none;
     padding: 10px;
     font-family: Abel;
@@ -397,9 +396,21 @@ li{
     font-size: 20px;
     line-height: 23px;
     color: #494545;
+    white-space: break-spaces;
+    overflow: auto;
 }
 
 .delete{
+    background: #CFD7F3;
+    border: 1px solid #3A3838;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
+}
+
+.edit {
     background: #CFD7F3;
     border: 1px solid #3A3838;
     box-sizing: border-box;
