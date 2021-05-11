@@ -28,14 +28,9 @@ export const homeView = () => { /*html*/
 
   <form id="task-form">
     <div id="post">
-<<<<<<< HEAD
-      <textarea id="description" rows="3" class="text-area" placeholder="Publica aquí tu contenido..."></textarea>
-      <button class="saveComment" id="saveComment" type="submit">Publicar</button>
-=======
       <input type="text" id="task-title" class="form-control" placeholder="Task tile">
       <textarea id="description" rows="3" class="text-area" placeholder="Título\nHistoria"></textarea>
       <button class="saveComment" id="saveComment" type="submit">Guardar</button>
->>>>>>> a75112482679d9fa96de72f0e81e42984ada1281
     </div>
     <div class="hr1"></div>
     <div id= "post-container" class="postContainer"></div>

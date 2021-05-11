@@ -22,19 +22,6 @@ const init = () => {
 
       window.addEventListener('DOMContentLoaded', (e) =>{
         const postContainer = document.getElementById('post-container');
-<<<<<<< HEAD
-        const querySnapshot = await getComments();
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          postContainer.innerHTML += `<p class="homeComments">
-          ${doc.data().description}
-          </p>
-          <button class="delete">Borrar</button>`
-        });
-        
-      })
-
-=======
 
         onGetComments((querySnapshot) =>{
           postContainer.innerHTML = '';
@@ -81,7 +68,6 @@ const init = () => {
 
         });
       });
->>>>>>> a75112482679d9fa96de72f0e81e42984ada1281
       break;
 
   };
