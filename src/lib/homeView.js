@@ -33,6 +33,7 @@ export const homeView = () => { /*html*/
     <div class="hr1"></div>
     <div id= "post-container" class="postContainer"></div>
   </form>
+
   <button onclick="signOut()"> Cerrar Sesión</button>
   <div class="jumbotronFooter" style="margin-bottom:0">
     <p>ParaSocial 2021 Todos los Derechos Reservados ©.</p>

@@ -1,0 +1,77 @@
+/*------------------------------------------BOOSTRAP HOME -------------------------------*/
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+  .jumbotron {
+    background-color: black;
+    height: 48px;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  h1{
+    font-family: Showcard Gothic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 19px;
+    text-align-last: left;
+    
+    color: #FDFDFD;
+  }
+
+
+  .ghostHome {
+    height: 120px;
+  }
+
+  @media (max-width: 600px) {
+    .ghostHome{
+      height: 90px;
+    }
+  }
+
+  .container{
+      background-color: #000000db; /* le da transparencia y asi no tengo que utilizar el opacity */
+      padding-top: 20px;
+  }
+
+  .navbar.navbar-expand-sm.bg-dark.navbar-dark {
+    display: flex;
+    background: #D8CEF3!important;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: -webkit-fill-available;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+  }
+
+  
+  .navbar-dark .navbar-brand {
+  color: hsl(0deg 0% 13%)!important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgb(0 0 0)!important;
+  }
+
+  .post{
+    height: 200px;
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin-right: 3%;
+    margin-left: 3%;
+    resize: none;
+  }
+
+  /*-----------------------------------------------------------------------------------*/
+
+  
