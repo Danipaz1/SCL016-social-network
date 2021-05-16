@@ -3,14 +3,15 @@ export const htmlLogin = () => {
 
   const div = document.createElement('div');
   div.classList.add('login-box');
-  div.innerHTML = `<div class="login-snip">
-  <h1>PARASOCIAL</h1>
-  <img id="ghost" src="./img/pngegg.png">
-  <p>
-    Únete a esta red de misterios, comparte tus experiencias, conoce miles de personas! Registrate ya!
-  </p>
-  <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-    <div class="login-space">
+  div.innerHTML = `
+        <div class="login-snip">
+          <h1>PARASOCIAL</h1>
+          <img id="ghost" src="./img/pngegg.png">
+          <p>
+          Únete a esta red de misterios, comparte tus experiencias, conoce miles de personas! Registrate ya!
+          </p>
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked=""><label for="tab-1" class="tab">Login</label> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-space">
         <div class="login">
             <div class="group"> <label for="user" class="label">Ingrese su correo electrónico</label> <input id="emailLogin" type="text" class="input" placeholder="Correo electrónico"> </div>
             <div class="group"> <label for="pass" class="label">Ingrese su contraseña</label> <input id="passLogin" type="password" class="input" data-type="password" placeholder="Contraseña"> </div>
@@ -29,13 +30,16 @@ export const htmlLogin = () => {
             <div class="group"> <input type="submit" class="button" id="registerButton" value="Registrar"> </div>
             <div class="hr"></div>
             <div class="foot"> <label for="tab-1">Already Member?</label> </div>
+
         </div>
     </div>
 </div>`
-//Evento botón de google
+
+//--------------------------------------------------------------EVENTO LINK GOOGLE
   const googleAcc = div.querySelector('#google');
   googleAcc.addEventListener('click', loginGoogle);
-//Botón de login
+  
+//--------------------------------------------------------------BOTÓN INGRESAR DE LOGIN
   const login2 = div.querySelector('#loginButton');
   login2.addEventListener('click', () => {
     let emailLogin = div.querySelector('#emailLogin').value;
@@ -57,7 +61,7 @@ export const htmlLogin = () => {
         alert(errorMessage);
       });
   });
-//Botón de registro
+//--------------------------------------------------------------BOTÓN REGISTRAR DE SIGN UP
   const login1 = div.querySelector('#registerButton');
   login1.addEventListener('click', () => {
     let email1 = div.querySelector('#emailRegister').value;
@@ -80,7 +84,8 @@ export const htmlLogin = () => {
   });
   return div;
 };
-//LOGIN CON GOOGLE
+
+//--------------------------------------------------------------FUNCIÓN PARA LOGUEAR CON GOOGLE
 const loginGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
 

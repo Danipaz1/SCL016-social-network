@@ -13,7 +13,7 @@ const init = () => {
     case '':
     case '#/login':
       //pintar login
-      document.cookie = "isEditing=false";
+      document.cookie = "isEditing=false"; // cookie no se edita
       document.querySelector('.card').innerHTML = '';
       document.querySelector('.card').appendChild(htmlLogin());
       break;
@@ -31,7 +31,7 @@ const init = () => {
             task.id = doc.id;
 
             postContainer.innerHTML += `<div class="homeComments">
-            ${doc.data().description}
+            ${task.description}
             </div>
             <div= "editAndDeleteBtn">
             <button class="delete" data-id= "${task.id}">Borrar</button>
@@ -69,6 +69,7 @@ const init = () => {
         });
       });
       break;
+
   };
 }
 

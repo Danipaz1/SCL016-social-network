@@ -1,5 +1,4 @@
-import { homeLogic} from './homeLogic.js'
-import { updateComment} from './homeLogic.js'
+import { homeLogic, updateComment} from './homeLogic.js'
 export const homeView = () => { /*html*/
 
   const divHome = document.createElement('div');
@@ -33,6 +32,7 @@ export const homeView = () => { /*html*/
     <div class="hr1"></div>
     <div id= "post-container" class="postContainer"></div>
   </form>
+
   <button onclick="signOut()"> Cerrar Sesión</button>
   <div class="jumbotronFooter" style="margin-bottom:0">
     <p>ParaSocial 2021 Todos los Derechos Reservados ©.</p>
@@ -47,7 +47,7 @@ export const homeView = () => { /*html*/
 
     const description = taskForm['description'].value;
 
-//Se da una condición para llamar a la
+//Se da una condición para llamar a la cookie
     if (isEditing == 'true') {
       const id = getCookie('idComment');
       await updateComment(id, description);
