@@ -40,10 +40,12 @@ export const htmlLogin = () => {
 </div>
 </div>
 </div>`
-//Evento botón de google
+
+//--------------------------------------------------------------EVENTO LINK GOOGLE
   const googleAcc = div.querySelector('#google');
   googleAcc.addEventListener('click', loginGoogle);
-//Botón de login
+  
+//--------------------------------------------------------------BOTÓN INGRESAR DE LOGIN
   const login2 = div.querySelector('#loginButton');
   login2.addEventListener('click', () => {
     let emailLogin = div.querySelector('#emailLogin').value;
@@ -65,7 +67,7 @@ export const htmlLogin = () => {
         alert(errorMessage);
       });
   });
-//Botón de registro
+//--------------------------------------------------------------BOTÓN REGISTRAR DE SIGN UP
   const login1 = div.querySelector('#registerButton');
   login1.addEventListener('click', () => {
     let email1 = div.querySelector('#emailRegister').value;
@@ -89,7 +91,7 @@ export const htmlLogin = () => {
   return div;
 };
 
-//-----------------------------------------------------LOGIN CON GOOGLE
+//--------------------------------------------------------------FUNCIÓN PARA LOGUEAR CON GOOGLE
 const loginGoogle = () => {
   var provider = new firebase.auth.GoogleAuthProvider();
 
