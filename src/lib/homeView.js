@@ -1,5 +1,4 @@
-import { homeLogic} from './homeLogic.js'
-import { updateComment} from './homeLogic.js'
+import { homeLogic, updateComment} from './homeLogic.js'
 export const homeView = () => { /*html*/
 
   const divHome = document.createElement('div');
@@ -48,7 +47,7 @@ export const homeView = () => { /*html*/
 
     const description = taskForm['description'].value;
 
-//Se da una condición para llamar a la
+//Se da una condición para llamar a la cookie
     if (isEditing == 'true') {
       const id = getCookie('idComment');
       await updateComment(id, description);

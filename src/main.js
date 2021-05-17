@@ -31,7 +31,7 @@ const init = () => {
             task.id = doc.id;
 
             postContainer.innerHTML += `<div class="homeComments">
-            ${doc.data().description}
+            ${task.description}
             </div>
             <div= "editAndDeleteBtn">
             <button class="delete" data-id= "${task.id}">Borrar</button>

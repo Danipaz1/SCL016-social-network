@@ -4,9 +4,6 @@ export const htmlLogin = () => {
   const div = document.createElement('div');
   div.classList.add('login-box');
   div.innerHTML = `
-  <div class="row">
-    <div class="col-md-6 mx-auto p-0">
-      <div class="card">
         <div class="login-snip">
           <h1>PARASOCIAL</h1>
           <img id="ghost" src="./img/pngegg.png">
@@ -36,9 +33,6 @@ export const htmlLogin = () => {
 
         </div>
     </div>
-</div>
-</div>
-</div>
 </div>`
 
 //--------------------------------------------------------------EVENTO LINK GOOGLE
