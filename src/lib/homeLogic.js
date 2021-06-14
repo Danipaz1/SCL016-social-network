@@ -14,7 +14,7 @@ export const deleteComment = async (id) => await db.collection('comments').doc(i
 
 export const getComment = async (id) => await db.collection('comments').doc(id).get();
 
-export const updateComment = async (id, description) => 
-await db.collection('comments').doc(id).update({
-    description
-});
+export const updateComment = async (id, description) =>
+    await db.collection('comments').doc(id).update({
+        description
+    });
